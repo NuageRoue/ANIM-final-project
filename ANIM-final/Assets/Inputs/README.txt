@@ -1,0 +1,1 @@
+Je ne sais pas encore trop comment je gérerai les input (un seul InputAction ou plusieurs), donc c'est susceptible de changer de forme.
