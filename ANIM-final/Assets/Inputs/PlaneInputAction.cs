@@ -94,30 +94,30 @@ public partial class @PlaneInputAction: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Pitch"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""1267ac1c-f34b-4381-81fd-3e114f460fea"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Yaw"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""9c6b0396-75ad-4361-8851-a6e41fab715e"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Roll"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""b2f6994f-f8b5-4e77-b6c7-f6bb15d381d1"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Throttle"",

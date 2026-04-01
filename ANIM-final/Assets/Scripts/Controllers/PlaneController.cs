@@ -12,7 +12,7 @@ public class PlaneController : MonoBehaviour
     private float throttle;
     private float roll, pitch, yaw;
     private Rigidbody rb;
-
+    public float lift = 135f;
 
     PlaneInputAction action;
 
@@ -36,10 +36,13 @@ public class PlaneController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Debug.Log(new Vector3(roll, pitch, yaw));
         rb.AddForce(transform.forward * maxThrottle * throttle);
         rb.AddTorque(transform.up * yaw * responseModifier);
         rb.AddTorque(transform.right * pitch * responseModifier);
-        rb.AddTorque(transform.forward * roll * responseModifier);
+        rb.AddTorque(-transform.forward * roll * responseModifier);
+
+        rb.AddForce(rb.transform.up * rb.linearVelocity.magnitude * lift);
     }
 
     void ThrottleInput() {
@@ -60,6 +63,8 @@ public class PlaneController : MonoBehaviour
         roll = action.Plane.Roll.ReadValue<float>();
         pitch = action.Plane.Pitch.ReadValue<float>();
         yaw = action.Plane.Yaw.ReadValue<float>();
+
+        
     }
 
     
